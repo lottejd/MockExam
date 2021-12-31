@@ -1,0 +1,18 @@
+syntax = "proto3";
+package Increment;
+
+option go_package = "./Increment";
+
+service IncrementService {
+    rpc Increment (incRequest) returns (incResponse);
+}
+
+
+message incRequest {
+    
+}
+
+message incResponse {
+    bool success = 1;
+    int32 inc = 2;
+}
