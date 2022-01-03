@@ -1,0 +1,26 @@
+syntax = "proto3";
+package Election;
+
+option go_package = "./Election";
+
+service ElectionService {
+    rpc Election (electionRequest) returns (answer);
+    rpc Coordinator (coordinatorMsg) returns (ack);
+}
+
+
+message electionRequest {
+    int32 id = 1;
+}
+
+message answer {
+    int32 id = 1;
+}
+
+message coordinatorMsg {
+    int32 id = 1;
+}
+
+message ack {
+
+}
